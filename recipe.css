@@ -1,0 +1,505 @@
+@charset "utf-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* ------------------------------------------------------CSS Reset------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -----------------------------------------------------End CSS reset--------------------------------------------- */
+
+/* Fonts
+font-family: 'Caveat', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+
+Palette
+Off-white (background): #f2f2f2
+Blue (accent, footer): #c7d7d9
+*/
+
+html{
+	background-color: #f2f2f2;
+	font-family: 'Lato', sans-serif;
+}
+main{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+a:visited{
+	color: #000000;
+}
+.container{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 10px;
+}
+.container > *{
+	grid-column: 1 / span 12;
+}
+
+/* -------------------------Header------------------------------------- */
+nav h2{
+	display: none;
+	height: 0;
+}
+header{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+h1{
+	font-family: 'Caveat', cursive;
+	color: #000000;
+	padding: 5px;
+	font-size: 25px;
+	background-color: #c7d7d9;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+#top-nav{
+	grid-column-start: 4;
+	grid-column-end: 7;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #c7d7d9;
+	font-size: .9em;
+}
+#top-nav ul{
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-evenly;
+	align-content: center;
+}
+#bot-nav{
+	display: flex;
+	grid-column-start: 1;
+	grid-column-end: 7;
+	grid-row-start: 2;
+	background-color: #ffffff;
+	border-top: 2px solid #c7d7d9;
+	border-bottom: 2px solid #c7d7d9;
+	font-size: .9em;
+}
+#bot-nav ul{
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-evenly;
+	align-items: center;
+}
+nav a{
+	padding: 10px;
+}
+#top-nav a:hover, #top-nav a:active{
+	color: #f2f2f2;
+}
+#bot-nav a:hover, #bot-nav a:active{
+	color: #c7d7d9;
+}
+
+/* ----------------------------Main Above Picture--------------------------------------- */
+
+
+#above-pic{
+	line-height: 1.4;
+	margin-bottom: 10px;
+}
+h2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	line-height: 1;
+}
+.bold{
+	font-weight: bold;
+}
+cite a{
+	text-decoration: underline;
+}
+cite a:hover, cite a:active{
+	text-decoration: none;
+}
+
+/* ----------------------------Main--------------------------------------- */
+
+
+.wrapper{
+	margin: 0 auto;
+	max-width: 90%;
+}
+#shakshuka-img{
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+#description{
+	margin-top: 20px;
+	line-height: 1.4;
+}
+#tags a{
+	text-decoration: underline;
+}
+#tags a:hover, #tags a:active{
+	text-decoration: none;
+}
+section{
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+h3{
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+/* ----------------------------Ingredients--------------------------------------- */
+
+
+#ingredients li{
+	display: grid;
+	grid-template-columns: 40px auto;
+	align-items: center;
+	margin-bottom: 15px;
+}
+#ingredients li:last-of-type{
+	margin-bottom: 0;
+}
+.quantity{
+	text-align: center;
+}
+#cilantro{
+	grid-column-start: 2;
+}
+
+/* ----------------------------Instructions--------------------------------------- */
+
+
+ol li{
+	list-style-type: decimal;
+	margin-bottom: 15px;
+	margin-left: 25px;
+}
+ol li:last-of-type{
+	margin-bottom: 0;
+}
+
+/* ----------------------------More Like This--------------------------------------- */
+
+h4{
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+figure{
+	margin-bottom: 25px;
+	transition: all .3s;
+}
+figure:last-of-type{
+	margin-bottom: 0;
+}
+figure img{
+	display: block;
+	margin: auto;
+	padding-bottom: 5px;
+	max-width: 80%;
+}
+figcaption{
+	text-align: center;
+}
+figure:hover, figure:active{
+	filter: brightness(60%);
+}
+
+/* ----------------------------Footer--------------------------------------- */
+
+footer{
+	background-color: #c7d7d9;
+	padding-bottom: 15px;
+}
+footer img{
+	width: 30px;
+	align-items: center;
+}
+footer a{
+	height: 30px;
+	width: 30px;
+}
+footer ul{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+#socials li{
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#socials a:hover, #socials a:active{
+	filter: brightness(50%);
+}
+#links li{
+	width: 100px;
+	text-align: center;
+	padding: 5px;
+}
+#links a{
+	margin-bottom: 20px;
+	text-decoration: underline;
+}
+#links a:hover, #links a:active{
+	text-decoration: none;
+}
+small{
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	margin-top: 10px;
+}
+footer a{
+	transition: all .3s;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 600px) {
+
+	/* ----------------------------Header--------------------------------------- */
+
+	h1{
+		font-size: 40px;
+		grid-column-end: 5;
+	}
+	#top-nav{
+		grid-column-start: 5;
+	}
+	nav a{
+		font-size: 1.1em;
+	}
+
+	/* ----------------------------Above Picture-------------------------------- */
+
+	#above-pic{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+	#item2{
+		grid-column-start: 1;
+		grid-row-start: 2;
+		align-self: end;
+	}
+	#item3{
+		justify-self: end;
+		align-self: end;
+	}
+	#item4{
+		justify-self: end;
+		align-self: end;
+	}
+	#shakshuka-img{
+		max-width: 600px;
+		width: 100%;
+	}
+	/* ----------------------------More--------------------------------------- */
+
+	.wrapper{
+		background-color: #ffffff;
+		padding: 20px;
+		margin-bottom: 50px;
+	}
+	figure{
+		display: inline-flex;
+		flex-direction: column;
+		max-width: 30%;
+		margin: 0 auto;
+		margin-right: 5px;
+	}
+	#more{
+		margin: auto;
+		text-align: center;
+	}
+	figure img{
+		display: inline;
+		max-width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+	/* ----------------------------Main--------------------------------------- */
+
+	h1{
+		font-size: 50px;
+	}
+	#overview{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		border-bottom: 3px solid #c7d7d9;
+		grid-column-gap: 20px;
+	}
+	#above-pic{
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	#description{
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+	#main-recipe{
+		display: grid;
+		align-items: start;
+		justify-items: start;
+		grid-column-gap: 20px;
+	}
+	#instructions{
+		grid-column-start: 2;
+	}
+}
+
+
+
+
+@media print {
+	body{
+		background-color: #ffffff;
+		font-size: 14px;
+	}
+	h1{
+		font-size: 50px;
+	}
+	#overview{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		border-bottom: 3px solid #c7d7d9;
+		grid-column-gap: 20px;
+	}
+	#description{
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+	#main-recipe{
+		display: grid;
+		align-items: start;
+		justify-items: start;
+		grid-column-gap: 20px;
+	}
+	#instructions{
+		grid-column-start: 2;
+	}
+	figure{
+		display: inline-flex;
+		flex-direction: column;
+		max-width: 30%;
+		margin: 0 auto;
+		margin-right: 5px;
+	}
+	#more{
+		margin: auto;
+		text-align: center;
+	}
+	figure img{
+		display: inline;
+		max-width: 100%;
+	}
+	#above-pic{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	#item2{
+		grid-column-start: 1;
+		grid-row-start: 2;
+		align-self: end;
+	}
+	#item3{
+		justify-self: end;
+		align-self: end;
+	}
+	#item4{
+		justify-self: end;
+		align-self: end;
+	}
+	nav, nav ul, nav li{
+		display: none;
+		height: 0;
+	}
+	h1{
+		background-color: #ffffff;
+	}
+	section{
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+	footer a{
+		display: none;
+		height: 0;
+	}
+	#main-recipe{
+		page-break-after: always;
+	}
+} 
